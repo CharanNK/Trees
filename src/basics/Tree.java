@@ -1,15 +1,5 @@
 package basics;
 
-class Node{
-	int key;
-	Node root;
-	Node left;
-	Node right;
-	Node(int k){
-		key = k;
-	}
-}
-
 public class Tree {
 	
 	static void inorder(Node root) {
