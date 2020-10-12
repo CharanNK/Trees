@@ -13,27 +13,24 @@ package basics;
 public class TreeTraversals {
 	
 	static void inorder(Node root) {
-		if(root!=null) {
-			inorder(root.left);
-			System.out.print(root.key+" ");
-			inorder(root.right);
-		}
+		if(root == null) return;
+		inorder(root.left);
+		System.out.print(root.key+" ");
+		inorder(root.right);
 	}
 	
 	static void preorder(Node root) {
-		if(root!=null) {
-			System.out.print(root.key+" ");
-			inorder(root.left);
-			inorder(root.right);
-		}
+		if(root == null)return;
+		System.out.print(root.key+" ");
+		preorder(root.left);
+		preorder(root.right);
 	}
 	
 	static void postorder(Node root) {
-		if(root!=null) {
-			postorder(root.left);
-			postorder(root.right);
-			System.out.print(root.key+" ");
-		}
+		if(root == null) return;
+		postorder(root.left);
+		postorder(root.right);
+		System.out.print(root.key+" ");
 	}
 
 	public static void main(String[] args) {
